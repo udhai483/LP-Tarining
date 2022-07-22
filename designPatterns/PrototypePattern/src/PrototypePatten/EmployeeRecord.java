@@ -1,9 +1,9 @@
 package PrototypePatten;
 
 public class EmployeeRecord implements Prototype{
-    private int employeeNum;
-    private String employeeName,designation,address;
-    private double salary;
+    private int Emp_num;
+    private String Emp_name,Desig,Add;
+    private double Sal;
 
     public EmployeeRecord(){
         System.out.println("Employee Records in ABC Company");
@@ -11,21 +11,21 @@ public class EmployeeRecord implements Prototype{
         System.out.println("EmpId" + "\t" + "EmpName" + "\t\t" + "Designation" + "\t\t" + "Salary" + "\t\t" + "Address");
     }
 
-    public EmployeeRecord(int employeeNum, String employeeName, String designation, double salary, String address) {
+    public EmployeeRecord(int Emp_num, String Emp_name, String Desig, double Sal, String Add) {
         this();
-        this.employeeNum = employeeNum;
-        this.employeeName = employeeName;
-        this.designation = designation;
-        this.address = address;
-        this.salary = salary;
+        this.Emp_num = Emp_num;
+        this.Emp_name = Emp_name;
+        this.Desig = Desig;
+        this.Add = Add;
+        this.Sal = Sal;
     }
 
     public void showRecord(){
-        System.out.println(employeeNum + "\t" + employeeName + "\t" + designation + "\t" + salary + "\t\t" + address);
+        System.out.println(Emp_num + "\t" + Emp_name + "\t" + Desig + "\t" + Sal + "\t\t" + Add);
     }
 
     @Override
     public Prototype getClone() {
-        return new EmployeeRecord(employeeNum,employeeName,designation,salary,address);
+        return new EmployeeRecord(Emp_num,Emp_name,Desig,Sal,Add);
     }
 }

@@ -9,16 +9,16 @@ public class FiveHundredDispenser extends PaperCurrencyDispenser{
     @Override
     public void dispense(PaperCurrency currency) {
         if (currency != null) {
-            int amount = currency.getAmount();
-            int remainder = amount;
-            if (amount >= 500) {
-                int count = amount / 500;
-                remainder = amount % 500;
-                System.out.printf("Dispensing '%d' 500/= currency note.\n", count);
+            int Amount = currencAmount();
+            int Remainder = Amount;
+            if (Amount >= 500) {
+                int Count = Amount / 500;
+                Remainder = Amount % 500;
+                System.out.printf("Dispensing '%d' 500/= currency note.\n", Count);
             }
 
-            if (remainder > 0 && this.nextDispenser != null) {
-                this.nextDispenser.dispense(new PaperCurrency(remainder));
+            if (Remainder > 0 && this.nextDispenser != null) {
+                this.nextDispenser.dispense(new PaperCurrency(Remainder));
             }
         }
     }

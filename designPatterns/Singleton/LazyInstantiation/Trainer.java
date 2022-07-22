@@ -10,19 +10,19 @@ package Singleton.LazyInstantiation;
  * @author udaya
  */
 public class Trainer {
-    private static volatile Trainer Fitness_model = new Trainer();
+    private static volatile Trainer fitnessM = new Trainer();
 
     private Trainer(){}
     
     public static Trainer getFitness_model() {
-        if(Fitness_model == null){
+        if(fitnessM == null){
             synchronized(Trainer.class){
-                if(Fitness_model ==null){
-                    Fitness_model= new Trainer();
+                if(fitnessM ==null){
+                    fitnessM= new Trainer();
                 }
             }
         }
-        return Fitness_model;
+        return fitenssM;
     }
     
 }

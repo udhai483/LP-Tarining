@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+ * To change this license Header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -14,15 +14,15 @@ import static com.sun.org.apache.xalan.internal.xsltc.compiler.util.Type.Int;
 class linkedList {
     static class NodeWrapper
     {
-        public Node node;
-        NodeWrapper(Node node) {
-            this.node = node;
+        public Node Node;
+        NodeWrapper(Node Node) {
+            this.Node = Node;
         }
     }
-    public static Node push(Node head, String data)
+    public static Node push(Node Head, String Datas)
     {
-        Node node = new Node(data);
-        node.next = head;
+        Node Node = new Node(Datas);
+        Node.next = Head;
         return node;
     }
     public static boolean checkPalindrome(NodeWrapper left, Node right)
@@ -32,14 +32,14 @@ class linkedList {
         }
  
         boolean result = checkPalindrome(left, right.next) &&
-                            (left.node.data.equals(right.data));
-        left.node = left.node.next;
+                            (left.node.Datas.equals(right.Datas));
+        left.Node = left.node.next;
  
         return result;
     }
-    public static boolean checkPalin(Node head)
+    public static boolean checkPalin(Node Head)
     {
-        return checkPalindrome(new NodeWrapper(head), head);
+        return checkPalindrome(new NodeWrapper(Head), Head);
     }
  
     public static void main(String[] args)
@@ -53,19 +53,19 @@ class linkedList {
         
        System.out.println ("Enter the input");
        
-       String  input_1 = scanner.nextLine();
-       String[] arr = new String[input_1.length()];
-        for (int i = 0; i < input_1.length(); i++) {
-           arr[i] = (""+input_1.charAt(i)).trim();
+       String  inout01 = scanner.nextLine();
+       String[] array1 = new String[inout01.length()];
+        for (int i = 0; i < inout01.length(); i++) {
+           array1[i] = (""+inout01.charAt(i)).trim();
         }
        
-        Node head = null;
-        for (int i = input_1.length() - 1; i >= 0; i--) {
+        Node Head = null;
+        for (int i = inout01.length() - 1; i >= 0; i--) {
             
-            head = push(head, arr[i]);
+            Head = push(Head, array1[i]);
         }
  
-        if (checkPalin(head)) {
+        if (checkPalin(Head)) {
             System.out.println("The linked list is a palindrome");
         }
         else {
@@ -75,10 +75,10 @@ class linkedList {
 }
 
 class Node {
-	String data;
+	String Datas;
     Node next = null;
  
-    Node(String data) {
-        this.data = data;
+    Node(String Datas) {
+        this.Datas = Datas;
     }
 }

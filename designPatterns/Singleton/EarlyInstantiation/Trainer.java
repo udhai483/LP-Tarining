@@ -10,14 +10,14 @@ package Singleton.EarlyInstantiation;
  * @author udaya
  */
 public class Trainer {
-    private static volatile Trainer Fitness_Model = new Trainer();
+    private static volatile Trainer FitnessM = new Trainer();
     
     private Trainer() {
     
     }
 
-    public static Trainer getFitness_Model() {
-        return Fitness_Model;
+    public static Trainer getFitnessM() {
+        return FitnessM;
     }
   
     

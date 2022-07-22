@@ -12,11 +12,11 @@ package Singleton.EarlyInstantiation;
 public class Gym {
     public static void main(String [] args) {
     
-            Trainer Fitness_Model1 = Trainer.getFitness_Model();
-            Trainer Fitness_Model2 = Trainer.getFitness_Model();
+            Trainer fitnessM1 = Trainer.getFitness_Model();
+            Trainer fitnessM2 = Trainer.getFitness_Model();
             
-            System.out.println(Fitness_Model1);
-            System.out.println(Fitness_Model1);
+            System.out.println(fitnessM1);
+            System.out.println(fitnessM1);
     }
            
 }

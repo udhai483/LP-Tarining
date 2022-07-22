@@ -18,9 +18,9 @@ public class NotificationSender {
                  + "1. SMS \n"
                  + "2. Email");
          try (Scanner scanner = new Scanner(System.in)) {
-                String option = scanner.nextLine();
+                String opt = scanner.nextLine();
        
- ExecutorFactory.getNotificationExecutor(option.toUpperCase()).executeNotification();
+ ExecutorFactory.getNotificationExecutor(opt.toUpperCase()).executeNotification();
         }
  
  

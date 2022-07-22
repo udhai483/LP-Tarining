@@ -13,8 +13,8 @@ public class AppThreads implements Runnable {
 
     @Override
     public void run() {
-        Trainer Fitness_model = Trainer.getFitness_model();
-        System.out.println(Fitness_model);
+        Trainer FitnessM = Trainer.getFitnessM();
+        System.out.println(FitnessM);
     }
    
     

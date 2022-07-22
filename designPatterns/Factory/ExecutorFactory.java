@@ -10,10 +10,10 @@ package Factory;
  * @author udaya
  */
 public class ExecutorFactory {
-    public static NotificationExecutor getNotificationExecutor(String executorType) {
-       if(executorType.equals("EMAIL"))
+    public static NotificationExecutor getNotificationExecutor(String executerT) {
+       if(executerT.equals("EMAIL"))
          return new EmailExecutor();
-       if(executorType.equals("SMS"))
+       if(executerT.equals("SMS"))
          return new SMSExecutor();
        return null;
      } 

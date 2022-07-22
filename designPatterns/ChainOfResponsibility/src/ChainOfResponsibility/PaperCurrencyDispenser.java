@@ -2,10 +2,10 @@ package ChainOfResponsibility;
 
 public abstract class PaperCurrencyDispenser {
 
-    protected PaperCurrencyDispenser nextDispenser;
+    protected PaperCurrencyDispenser nextDisp;
 
-    public void setNextDispenser(PaperCurrencyDispenser nextDispenser) {
-        this.nextDispenser = nextDispenser;
+    public void setNextDispenser(PaperCurrencyDispenser nextDisp) {
+        this.nextDisp = nextDisp;
     }
 
     public abstract void dispense(PaperCurrency currency);

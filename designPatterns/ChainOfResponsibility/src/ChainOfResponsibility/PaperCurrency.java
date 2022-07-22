@@ -2,19 +2,19 @@ package ChainOfResponsibility;
 
 public class PaperCurrency {
 
-    protected int amount;
+    protected int Amount;
 
-    public PaperCurrency(int amount) {
+    public PaperCurrency(int Amount) {
         super();
-        this.amount = amount;
+        this.Amount = Amount;
     }
 
     public int getAmount() {
-        return amount;
+        return Amount;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setAmount(int Amount) {
+        this.Amount = Amount;
     }
 
 }

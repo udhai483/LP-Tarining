@@ -9,21 +9,21 @@ public class ResponsibilityDemo {
                 System.out.println(
                         "Please enter amount to withdraw " +
                                 "(500,1000,2000,5000, max 100,000/=, Press Ctrl + C to end): ");
-                int amount = scanner.nextInt();
-                if (isValid(amount)) {
-                    ATMWithdrawal.withdraw(new PaperCurrency(amount));
+                int Amount = scanner.nextInt();
+                if (isValid(Amount)) {
+                    ATMWithdrawal.withdraw(new PaperCurrency(Amount));
                 }
             } while (true);
         }
     }
-    private static boolean isValid(int amount) {
-        if (amount <= 0) {
-            System.out.println("Invalid amount. Try again!");
+    private static boolean isValid(int Amount) {
+        if (Amount <= 0) {
+            System.out.println("Invalid Amount. Try again!");
             return false;
-        } else if (amount > 100000) {
+        } else if (Amount > 100000) {
             System.out.println("Daily withdrawal limit is 100,000/=. Try again!");
             return false;
-        } else if (amount % 500 != 0) {
+        } else if (Amount % 500 != 0) {
             System.out.println("Amount must be multiple of 500s, Try again!");
             return false;
         }

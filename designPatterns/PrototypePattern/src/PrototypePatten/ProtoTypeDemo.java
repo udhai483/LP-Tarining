@@ -10,30 +10,30 @@ public class ProtoTypeDemo {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
         System.out.print("Enter Employee Id: ");
-        int empId = Integer.parseInt(br.readLine());
+        int emp_id = Integer.parseInt(br.readLine());
         System.out.print("\n");
 
         System.out.print("Enter Employee Name: ");
-        String empName = br.readLine();
+        String emp_name = br.readLine();
         System.out.print("\n");
 
         System.out.print("Enter Employee Designation: ");
-        String empDesignation = br.readLine();
+        String emp_designation = br.readLine();
         System.out.print("\n");
 
         System.out.print("Enter Employee Salary: ");
-        double empSalary = Double.parseDouble(br.readLine());
+        double emp_sal = Double.parseDouble(br.readLine());
         System.out.print("\n");
 
         System.out.print("Enter Employee Address: ");
-        String empAddress = br.readLine();
+        String emp_add = br.readLine();
         System.out.print("\n");
 
-        EmployeeRecord e1 = new EmployeeRecord(empId,empName,empDesignation,empSalary,empAddress);
+        EmployeeRecord emp1 = new EmployeeRecord(emp_id,emp_name,emp_designation,emp_sal,emp_add);
 
-        e1.showRecord();
+        emp1.showRecord();
         System.out.println("\n");
-        EmployeeRecord e2 = (EmployeeRecord) e1.getClone();
-        e2.showRecord();
+        EmployeeRecord emp2 = (EmployeeRecord) emp1.getClone();
+        emp2.showRecord();
     }
 }

@@ -11,13 +11,13 @@ package Singleton.LazyInstantiation;
  */
 public class Gym {
     public static void main(String[] args) {
-        Thread t1= new Thread(new AppThreads());
-        Thread t2= new Thread(new AppThreads());
+        Thread thread1= new Thread(new AppThreads());
+        Thread thread2= new Thread(new AppThreads());
         
-        t1.start();
-        t2.start();
+        thread1.start();
+        thread2.start();
         
-        if(t1.equals(t2)){
+        if(thread1.equals(thread2)){
             System.out.println("Same value");
         }
         else{
